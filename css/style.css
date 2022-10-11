@@ -135,7 +135,7 @@ h4{
 .footer{
     margin: 0;
     width: 100%;
-    height: fit-content;
+    height: min-content;
     display: flex;
 }
 .footer-logo{

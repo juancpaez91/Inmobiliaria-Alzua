@@ -1,170 +1,250 @@
-html, body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    font-size: large;
-    margin: 0;
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+/* Estilos para la navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.content{
+/* Estilos para el logo */
+.content-logo {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content:space-around;
-    align-items: center;
-	width:100%;
-}
-
-.content-logo{
-    width: 50%;
-}
-.logo{
     width: 100%;
-    justify-content: flex-start;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.contacto{
-    margin-bottom: 10px;
-    padding: 20px;
-    width:max-content;
-    height: min-content;
-    justify-content: flex-end;
-    background: rgb(255, 255, 255);
-    color: rgb(176, 176, 180);
-    border:1px solid rgb(176, 176, 180);
+#logo {
+  width: 50%;
+  height: auto;
 }
+
+
+/*formulario de contacto*/
+.formulario{
+  display: flex;
+  background: rgba(218, 218, 218, 0.788);
+}
+form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+input, select, textarea {
+  width: 70em;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid rgb(176, 176, 180);
+  border-radius: 5px;
+}
+
+button{
+  margin-bottom: 10px;
+  padding: 20px;
+  width: max-content;
+  height: min-content; 
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(176, 176, 180);
+  border-radius: 5px;
+}
+.aviso {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp-icon:hover{
+  width: 80px;
+  height: 80px;
+  transition: 500ms;
+}
+
+/*banner styles*/
 
 .banner{
-    background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1664456094/Alzua%20inmobiliaria/s2_m9luct.webp");
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-    margin: 0;
+  background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1664456094/Alzua%20inmobiliaria/s2_m9luct.webp");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display:flex;
+  align-items: flex-start;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
 }
-
-.content-banner{
-    display: flex;
-    height: 300px;
-    width: 50%;
-    align-content: flex-start;
-    justify-content: flex-end;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items:flex-end;
+#slogan{
+  color: rgb(238, 185, 9);
+  font-size: xx-large;
+  width: 30%;
+  text-align: center;
+  text-shadow: 1.5px 1.5px 1.5px rgb(124, 100, 19);
+  margin: 0;
 }
-.slogan{
-    margin: auto;
-    padding: 15px;
-    font-size:medium;
-    color: beige;
-    font-weight: bold;
-}
+/*contenedor*/
 
 .container{
-    width: 100%;
-    height: fit-content;
-    background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-us, .objetivo{
-    margin: auto;
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    /* background: rgb(255, 255, 255); */
+.about-us, .servicios, .servicios-content, .objetivo{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
-.titulo{
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-.texto-centrado{
-    text-align: center;
-    font-size: small;
-    font-weight:500;
-    line-height: 2;
-}
-
-.servicios-content{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    align-content: space-between;
-}
 .card{
-    background-size: cover;
-    width: 100%;
-    height: 700px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    justify-content: flex-end;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 .card-content{
-    width: 100%;
-    margin: auto;
-    height: min-content;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-.card-text, .datos-text{
-    text-align: center;
-    text-transform:none;
-    font-size: small;
+  width: 100%;
+  margin: auto;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.651);
 }
 
-h4{
-    color: darkgray;
-}
+h3{
 
-.footer{
-    margin: 0;
-    width: 100%;
-    height: min-content;
-    display: flex;
-}
-.footer-logo{
-    width: 100%;
-}
-.datos{
-    width: min-content;
-    display: flex;
-    margin: auto;
+  color: rgb(112, 109, 109);
 }
 
 .bg-1{
-    background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665445965/Alzua%20inmobiliaria/2225_xl66yp.webp");
+  background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665445965/Alzua%20inmobiliaria/2225_xl66yp.webp");
 }
 
 .bg-2{
-    background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665446663/Alzua%20inmobiliaria/2226_ff4arz.jpg");
+  background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665446663/Alzua%20inmobiliaria/2226_ff4arz.jpg");
 }
 
 .bg-3{
-    background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665447201/Alzua%20inmobiliaria/screen_q1atvq.webp");
+  background-image: url("https://res.cloudinary.com/sapphiredev/image/upload/v1665447201/Alzua%20inmobiliaria/screen_q1atvq.webp");
 }
 
-.bg-4{
-margin: auto;
-background: rgba(0, 0, 0, 0.064);
-color: rgba(0, 0, 0);}
+.bg-1, .bg-2, .bg-3{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-#copyright{
-    font-size: xx-small;
-    text-align: center;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+#footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-logo{
+  width: 20%;
+  height: 20%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contacto, .redesSociales {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+}
+
+#copy {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 20px;
 }

@@ -1,92 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Alzua Inmoviliaria</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alzua Inmobiliaria</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <nav class="content">
-            <div class="content-logo">
-                <img class="logo"src="https://res.cloudinary.com/sapphiredev/image/upload/v1630521608/Alzua%20inmobiliaria/iconos/logo_nav_eyz4rp.webp" alt="">
-            </div>
-            <div class="content-contacto">
-                <button class="contacto">Contáctanos ahora</button>
-            </div>
-        </nav>
-        <div class="banner">
-            <div class="content-banner">
-                <p class="slogan">Creemos en la magia de los nuevos comienzos</p>
-            </div>
+      <nav>
+        <div class="content-logo">
+          <img id="logo"src="https://res.cloudinary.com/sapphiredev/image/upload/v1632791260/Alzua%20inmobiliaria/iconos/Alzuapng123_e843l1.png" alt="Logo" />
         </div>
+      </nav>
+
+      <div class="banner">
+        <p id="slogan">Creemos en la magia de los nuevos comienzos</p>
+      </div>
     </header>
-    <section class="container">
+
+    <main>
+      <section class="container">
         <article class="about-us">
-            <div>
-                <h3 class="titulo">nuestra empresa</h3>
-                <p class="texto-centrado">Brindamos soluciones con agilidad y creatividad comercial. Con un trato exclusivo y personalizado presentamos este nuevo proyecto basado en nuevas ideas, tecnologías y marketing aplicado al negocio inmobiliario.</p>
-            </div>
+          <h2>nuestra empresa</h2>
+          <p>Brindamos soluciones con agilidad y creatividad comercial. Con un trato exclusivo y personalizado presentamos este nuevo proyecto basado en nuevas ideas, tecnologías y marketing aplicado al negocio inmobiliario.</p>
         </article>
         <article class="servicios">
-            <h3 class="titulo">nuestros servicios</h3>
-            <div class="servicios-content">
-                <div class="card bg-1">
-                    <div class="card-content">
-                        <h4 class="titulo"> comprar/vender
-                        </h4>
-                        <p class="card-text">¿Estás buscando comprar o vender tu casa? Nosotros te ayudamos</p>
-                    </div>
-                </div>
-                <div class="card bg-2">
-                    <div class="card-content">
-                        <h4 class="titulo"> alquilar
-                        </h4>
-                        <p class="card-text">¿Tenés un nuevo trabajo y te están reubicando en un lugar nuevo? Podemos ayudarte.</p>
-                    </div>
-                </div>
-                <div class="card bg-3">
-                    <div class="card-content">
-                        <h4 class="titulo"> tasar tu inmueble
-                        </h4>
-                        <p class="card-text">¿Estás pensando en vender tu casa? ¡Queremos ayudarte!</p>
-                    </div>
-                </div>
+          <h2>nuestros servicios</h2>
+          <div class="servicios-content">
+            <div class="card bg-1">
+              <div class="card-content">
+                <h3>comprar/vender</h3>
+                <p>¿Estás buscando comprar o vender tu casa? Nosotros te ayudamos</p>
+              </div>
             </div>
+            <div class="card bg-2">
+              <div class="card-content">
+              <h3>alquilar</h3>
+              <p>¿Tenés un nuevo trabajo y te están reubicando en un lugar nuevo? Podemos ayudarte.</p>
+              </div>
+            </div>
+            <div class="card bg-3">
+              <div class="card-content">
+              <h3>tasar tu inmueble</h3>
+              <p>¿Estás pensando en vender tu casa? ¡Queremos ayudarte!</p>
+              </div>
+            </div>
+          </div>
         </article>
         <article class="objetivo">
-            <div>
-                <h3 class="titulo">nuestro objetivo</h3>
-                <p class="texto-centrado">Nuestro negocio real no es vender propiedades, sino ayudar a nuestros clientes a tomar la mejor decisión.</p>
-            </div>
+          <h2>nuestro objetivo</h2>
+          <p>Nuestro negocio real no es vender propiedades, sino ayudar a nuestros clientes a tomar la mejor decisión.</p>
         </article>
-    </section>
-    <footer class="bg-4">
-        <div class="footer">
-
-            <div>
-                <img class="footer-logo" src="https://res.cloudinary.com/sapphiredev/image/upload/v1630521608/Alzua%20inmobiliaria/iconos/android-chrome-192x192_r4j4wj.png"></img>
-            </div>
-            <div class="direccion">
-                <h6 class="titulo" >direccion</h6>
-                <p class="datos-text">Alsina 499, San Carlos de Bolívar, Buenos Aires</p>
-            </div>
+      </section>
+      <section class="formulario">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+          <div class="form-group">
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" required>
+              <option value="">Seleccione un asunto</option>
+              <option value="vender/comprar">Vender/Comprar</option>
+              <option value="alquilar">Alquilar</option>
+              <option value="tasar">Tasar</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button id="enviar" type="submit">Enviar</button>
+        </form>
+      </section>
+      <div id="whatsapp-button" class="whatsapp-button">
+        <img src="https://res.cloudinary.com/sapphiredev/image/upload/v1631065562/Alzua%20inmobiliaria/iconos/icons8-whatsapp-48_esdrnj.png" alt="WhatsApp" class="whatsapp-icon">
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+          <img id="footer-logo" src="https://res.cloudinary.com/sapphiredev/image/upload/v1632829008/Alzua%20inmobiliaria/iconos/Alzuapngblancodorado_kvgqf4.png">
+        <div class="contacto">
+          <h4>Contacto</h4>
+            <img src="https://res.cloudinary.com/sapphiredev/image/upload/v1630521608/Alzua%20inmobiliaria/iconos/whatsapp_dtanib.png" alt="instagram">
+            <p>2314410936</p>
         </div>
-        <div class="datos">
-            <div class="telefono">
-                <h6 class="titulo">telefono</h6>
-                <p class="datos-text">(2314) 410936</p>
-            </div>
-            <div class="mail">
-                <h6 class="titulo">e-mail</h6>
-                <p class="datos-text">alzuainmobiliaria@gmail.com</p>
-            </div>
+        <div class="redesSociales">
+          <h4> Encontranos en nuestras redes como</h4>
+          <a href="web.facebook.com/Alzua-Inmobiliaria-108018328146641" target="_blank"> 
+            <img src="https://res.cloudinary.com/sapphiredev/image/upload/v1630521609/Alzua%20inmobiliaria/iconos/facebook_csklk2.png" alt="facebook">
+            <p>Alzua Inmobiliaria</p>
+          </a>
+          <a href="https://www.instagram.com/alzuainmobiliaria/" target="_blank">
+            <img src="https://res.cloudinary.com/sapphiredev/image/upload/v1630521608/Alzua%20inmobiliaria/iconos/instagram_n8izhw.png" alt="instagram">
+            <p>Alzua Inmobiliaria</p> 
+          </a>
         </div>
+      </div>
+      <div id="copy">
+        <p>&copy; 2023 sapphiredevelopment</p>
+      </div>
     </footer>
-    <p id="copyright">
-        &copy; 2022 sapphiredevelopment
-    </p>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
+

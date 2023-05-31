@@ -11,9 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var asunto = document.getElementById('asunto').value;
     var mensaje = document.getElementById('mensaje').value;
 
-    // Validación de campos vacíos
-    if (nombre.trim() === '' || apellido.trim() === '' || correo.trim() === '' || asunto.trim() === '' || mensaje.trim() === '') {
+    // Validación de campos vacíos y sin números en nombre y apellido
+    if (
+      nombre.trim() === '' ||
+      apellido.trim() === '' ||
+      correo.trim() === '' ||
+      asunto.trim() === '' ||
+      mensaje.trim() === ''
+    ) {
       alert('Por favor, completa todos los campos del formulario.');
+      return;
+    }
+
+    if (/\d/.test(nombre) || /\d/.test(apellido)) {
+      alert('El nombre y el apellido no pueden contener números.');
       return;
     }
 

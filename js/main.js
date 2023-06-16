@@ -1,6 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var form = document.getElementById('contact-form');
+  // Obtén una referencia a todos los botones .btn-card
+  const btnCards = document.querySelectorAll('.btn-card');
+
+  // Obtén una referencia al formulario
+  const form = document.getElementById('formulario');
+
+  // Agrega el evento de clic a cada botón .btn-card
+  btnCards.forEach(function(btnCard) {
+    btnCard.addEventListener('click', function() {
+      // Obtén el valor del asunto desde el atributo de datos 'data-asunto'
+      const asunto = btnCard.getAttribute('data-asunto');
+
+      // Desplázate al formulario
+      form.scrollIntoView({ behavior: 'smooth' });
+
+      // Asigna el valor del asunto al campo de asunto del formulario
+      const asuntoInput = document.querySelector('#asunto');
+      asuntoInput.value = asunto;
+    });
+  });
+  
   var enviarButton = document.getElementById('enviar');
+  const numeroWhatsApp = '+5492314617633'; 
 
   enviarButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -8,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var nombre = document.getElementById('nombre').value;
     var apellido = document.getElementById('apellido').value;
     var correo = document.getElementById('correo').value;
-    var asunto = document.getElementById('asunto').value;
     var mensaje = document.getElementById('mensaje').value;
 
     // Validación de campos vacíos y sin números en nombre y apellido
@@ -16,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
       nombre.trim() === '' ||
       apellido.trim() === '' ||
       correo.trim() === '' ||
-      asunto.trim() === '' ||
       mensaje.trim() === ''
     ) {
       alert('Por favor, completa todos los campos del formulario.');
@@ -30,11 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Crea el mensaje para enviar por WhatsApp
     var mensajeWhatsApp = 'Mi nombre es ' + nombre + " " + apellido +'\n' +
-    'Te escribo por ' + asunto + '\n' +
-    mensaje;
-
-    var numeroWhatsApp = '+5492314410936'; // Reemplaza con el número de WhatsApp al que deseas enviar el mensaje
-
+    'Te escribo para ' + asunto.value + '\n' + mensaje + "." + " " + "Mi e-amail de contacto es:" + " " + correo;
     var enlaceWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(mensajeWhatsApp);
     window.open(enlaceWhatsApp);
 
@@ -43,10 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var whatsappButton = document.getElementById('whatsapp-button');
   whatsappButton.addEventListener('click', function() {
-    var numeroEmpresa = '+5492314410936'; // Reemplaza con el número de WhatsApp de la empresa
-    var mensajeWhatsApp = '¡Hola! Gracias por comunicarte con Inmobiliaria Alzua! ¿En qué podemos ayudarte?';
-    var urlWhatsApp = 'https://wa.me/' + numeroEmpresa + '?text=' + encodeURIComponent(mensajeWhatsApp);
-    window.open(urlWhatsApp, '_blank');
+    var mensajeWhatsAppBot = '¡Hola! Gracias por comunicarte con Inmobiliaria Alzua! ¿En qué podemos ayudarte?';
+    enlaceWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(mensajeWhatsAppBot);
+    window.open(enlaceWhatsApp, '_blank');
 
     mostrarAviso('Iniciando chat de WhatsApp');
   });

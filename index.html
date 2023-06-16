@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alzua Inmobiliaria</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- <a href="https://www.flaticon.es/iconos-gratis/bienes-raices" title="bienes raíces iconos">Bienes raíces iconos creados por monkik - Flaticon</a> -->
   </head>
   <body>
     <header>
       <nav>
         <div class="content-logo">
-          <img id="logo"src="https://res.cloudinary.com/sapphiredev/image/upload/v1632791260/Alzua%20inmobiliaria/iconos/Alzuapng123_e843l1.png" alt="Logo" />
+          <img id="logo"src="https://res.cloudinary.com/sapphiredev/image/upload/v1632791260/Alzua%20inmobiliaria/iconos/Alzuapng123_e843l1.webp" alt="Logo" />
         </div>
-      </nav>
+      </nav> 
 
       <div class="banner">
         <p id="slogan">Creemos en la magia de los nuevos comienzos</p>
@@ -29,32 +30,69 @@
         <article class="servicios">
           <h2>nuestros servicios</h2>
           <div class="servicios-content">
-            <div class="card bg-1">
+            <div class="card">
               <div class="card-content">
                 <h3>comprar/vender</h3>
+                <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685575760/Alzua%20inmobiliaria/iconos/inmobiliaria_kckru2.webp" alt="casa venta" >
                 <p>¿Estás buscando comprar o vender tu casa? Nosotros te ayudamos</p>
               </div>
+              <button class="btn-card" data-asunto= "compra/venta">consultar</button>
             </div>
-            <div class="card bg-2">
+            <div class="card">
               <div class="card-content">
               <h3>alquilar</h3>
+              <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685575792/Alzua%20inmobiliaria/iconos/pngegg_1_agqec0.webp" alt="imagen-casa" class="card-img">
               <p>¿Tenés un nuevo trabajo y te están reubicando en un lugar nuevo? Podemos ayudarte.</p>
-              </div>
             </div>
-            <div class="card bg-3">
+            <button class="btn-card" type="button" data-asunto="alquilar">consultar</button>
+            </div>
+            <div class="card">
               <div class="card-content">
               <h3>tasar tu inmueble</h3>
+              <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685575660/Alzua%20inmobiliaria/iconos/pngewe_f16mut.webp" alt="" >
               <p>¿Estás pensando en vender tu casa? ¡Queremos ayudarte!</p>
-              </div>
             </div>
-          </div>
+            <button class="btn-card" type="button" data-asunto="tasar un inmueble">consultar</button>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <h3>redaccion de contratos</h3>
+                <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685572438/Alzua%20inmobiliaria/iconos/pngegg_x92flj.png" alt="icono-contrato">
+                <p>Te ofrecemos servicios profesionales de redacción de informes para que puedas comunicar tus ideas de manera clara y efectiva.</p>
+              </div>
+              <button class="btn-card" type="button" data-asunto="redactar un contrato">consultar</button>
+            </div>
+            <div class="card">
+              <div class="card-content">
+              <h3>informes de titularidad</h3>
+              <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685572438/Alzua%20inmobiliaria/iconos/pngegg_x92flj.png" alt="icono-contrato">
+              <p>Obtén informes confiables y completos sobre la titularidad de propiedades y activos con nuestro servicio especializado.</p>
+            </div>
+            <button class="btn-card" type="button" data-asunto="informe de titularidad">consultar</button>
+            </div>
+            <div class="card">
+              <div class="card-content">
+              <h3>informe de inhibiciones</h3>
+              <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685572438/Alzua%20inmobiliaria/iconos/pngegg_x92flj.png" alt="icono-contrato">
+              <p>Obtén un informe detallado y confiable sobre inhibiciones legales que puedan afectar tu propiedad o activo.</p>
+            </div>
+            <button class="btn-card" type="button" data-asunto="informe de inhibiciones">consultar</button>
+            </div>
+            <div class="card">
+              <div class="card-content">
+              <h3>formato de contratos</h3>
+              <img class="card-img" src="https://res.cloudinary.com/sapphiredev/image/upload/v1685577605/Alzua%20inmobiliaria/iconos/vecteezy_deal-contract-icon-on-transparent-background_17196610_132_tlee0a.webp" alt="icono-contrato">
+              <p>Simplifica tus trámites legales utilizando nuestros formatos profesionales de contratos.</p>
+            </div>
+            <button class="btn-card" type="button" data-asunto="formato de contrato">consultar</button>
+            </div>
         </article>
         <article class="objetivo">
           <h2>nuestro objetivo</h2>
           <p>Nuestro negocio real no es vender propiedades, sino ayudar a nuestros clientes a tomar la mejor decisión.</p>
         </article>
       </section>
-      <section class="formulario">
+      <section id="formulario">
         <form id="contact-form">
           <div class="form-group">
             <label for="nombre">Nombre:</label>
@@ -65,17 +103,12 @@
             <input type="text" id="apellido" name="apellido" required>
           </div>
           <div class="form-group">
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" name="asunto">
           </div>
           <div class="form-group">
-            <label for="asunto">Asunto:</label>
-            <select id="asunto" name="asunto" required>
-              <option value="">Seleccione un asunto</option>
-              <option value="vender/comprar">Vender/Comprar</option>
-              <option value="alquilar">Alquilar</option>
-              <option value="tasar">Tasar</option>
-            </select>
+            <label for="correo">Correo electrónico
+            <input type="email" id="correo" name="correo" required>
           </div>
           <div class="form-group">
             <label for="mensaje">Mensaje:</label>
